@@ -45,3 +45,5 @@ for (let validUser of users.filter(filter)) {
 - `$size` - See mongoDB's [documentation](https://docs.mongodb.com/manual/reference/operator/query/size/).
 - `$all` - See mongoDB's [documentation](https://docs.mongodb.com/manual/reference/operator/query/all/).
 - `$elemMatch` - See mongoDB's [documentation](https://docs.mongodb.com/manual/reference/operator/query/elemMatch/).
+- `$startsWith` - wraps over `String.prototype.startsWith`.
+- `$endsWith` - wraps over `String.prototype.endsWith`.

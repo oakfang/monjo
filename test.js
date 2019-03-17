@@ -232,3 +232,23 @@ testQueryLength(
   },
   1
 );
+
+testQueryLength(
+  'startsWith',
+  {
+    name: {
+      $startsWith: 'f',
+    },
+  },
+  1
+);
+
+testQueryLength(
+  'endsWith',
+  {
+    name: {
+      $endsWith: 'oo',
+    },
+  },
+  1
+);

@@ -22,6 +22,14 @@ const ops = {
     Array.from(filter).every(item => value.includes(item)),
   $elemMatch: (filter, value) =>
     Array.isArray(value) && value.some(compileFilter(filter)),
+  $startsWith: (filter, value) =>
+    typeof filter === 'string' &&
+    typeof filter === 'string' &&
+    value.startsWith(filter),
+  $endsWith: (filter, value) =>
+    typeof filter === 'string' &&
+    typeof filter === 'string' &&
+    value.endsWith(filter),
 };
 
 function compileFilter(filter, ctx) {
