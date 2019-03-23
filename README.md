@@ -22,7 +22,7 @@ const query = {
   },
 };
 const filter = compileFilter(query);
-const users = getUsers;
+const users = getUsers();
 for (let validUser of users.filter(filter)) {
   // do stuff
 }
@@ -47,3 +47,21 @@ for (let validUser of users.filter(filter)) {
 - `$elemMatch` - See mongoDB's [documentation](https://docs.mongodb.com/manual/reference/operator/query/elemMatch/).
 - `$startsWith` - wraps over `String.prototype.startsWith`.
 - `$endsWith` - wraps over `String.prototype.endsWith`.
+
+## Custom filters
+
+Filters (nested, or otherwise) may be funtions that accept values and return a boolean-like value.
+
+```js
+const compileFilter = require('monjo');
+const query = {
+  age(age) {
+    return age % 10 === 0;
+  },
+};
+const filter = compileFilter(query);
+const users = getUsers();
+for (let validUser of users.filter(filter)) {
+  // do stuff
+}
+```

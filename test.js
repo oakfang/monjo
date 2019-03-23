@@ -35,6 +35,16 @@ testQueryLength(
 );
 
 testQueryLength(
+  'Querying with filters',
+  {
+    age(age) {
+      return age % 10 === 0;
+    },
+  },
+  1
+);
+
+testQueryLength(
   'advanced json filtering ($ne)',
   {
     age: {

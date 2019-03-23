@@ -49,6 +49,9 @@ function compileFilter(filter, ctx) {
         return compiled[prop](prop.startsWith('$') ? value : value[prop]);
       });
   }
+  if (typeof filter === 'function') {
+    return value => filter(value);
+  }
   return value => isEqual(value, filter);
 }
 
