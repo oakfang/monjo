@@ -1,6 +1,6 @@
 {
   "name": "monjo",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "mongoDB inspired JSON filters for JS",
   "main": "index.js",
   "repository": "git@github.com:oakfang/monjo.git",
@@ -22,6 +22,6 @@
   },
   "devDependencies": {
     "nefarious": "^3.1.0",
-    "nyc": "^13.3.0"
+    "nyc": "^14.1.1"
   }
 }
